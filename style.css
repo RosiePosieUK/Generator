@@ -78,11 +78,12 @@ h2{
 	font-family: 'open sans', sans-serif;
 	color: white;
 	font-weight: 400;
+	font-size: 1em;
 }
 
 .price{
 	font-weight: 700;
-	font-size: 1.42em;
+	font-size: 1.2em;
 }
 
 .marginBottom{
@@ -102,9 +103,9 @@ h2{
 }
 
 .gift{
-	width: 50%;
+	width: 45%;
 	background-color: white;
-	border: 10px solid #cea267;
+	border: 5px solid #cea267;
 	display: inline-block;
 }
 
@@ -144,9 +145,27 @@ h2{
 	background-color: #e1565f;
 }
 
+.color1:hover{
+	background-color: #cb4d55;
+}
+
 .color2{
 	background-color: #7CBFC8;
 }
+
+.color2:hover{
+	background-color: #72adb5;
+}
+
+.disabled{
+	opacity: 0.65;
+	cursor: not-allowed;
+	background-color: #cb4d55;
+}
+
+
+
+
 
 .form{
 	width: 24%;
@@ -154,13 +173,13 @@ h2{
 	display: inline-block;
 	vertical-align: top;
 	margin: 0 auto;
+	padding: 2%;
+
 }
 
 .form > *{
-	display: block;
 	margin-bottom: 30px;
-	text-align: center;
-}
+	}
 
 .hidden{
 	display: none;
@@ -174,10 +193,74 @@ h2{
 		height: auto;
 	}
 
+	.marginBottom{
+		margin-bottom: 15px;
+	}
+
+	.paddingBottom{
+		padding-bottom: 15px;
+	}
+
 	.container{
 		width: 100%;
 
 	}
+
+	h2{
+		font-size: 12px;
+		letter-spacing: 1px;
+		font-weight: 700;
+		line-height: 130%;
+		padding: 0 5px 0 5px;
+	}
+
+	.form > *{
+		margin-bottom: 15px;
+	}
+
+	.dd{
+		font-size: 12px;
+		padding: 0px;
+	}
+
+	.button{
+		padding: 5px 10px 5px 10px;
+		border: none;
+		text-decoration: none;
+		font-size: 12px;
+		font-family: 'open sans', sans-serif;
+		font-weight: 800;
+		text-transform: uppercase;
+		color: white;
+		letter-spacing: 1px;
+	}
+
+	.form{
+		display: block;
+		width: 100%;
+	}
+
+	.inline{
+		display: inline;
+		margin: 5px;
+	}
+
+	.copy{
+		font-size: 12px;
+	}
+
+
+
+	.gift{
+		display: block;
+		width: 90%;
+		margin: 0 auto;
+		text-align: center;
+	}
+
+	.main > img{
+	display: none;
+}
 
 
 }/* end media query*/

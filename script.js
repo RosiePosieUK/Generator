@@ -66,11 +66,30 @@ var category2 = [
 
 var gift = document.getElementById("gift");
 var recipient = document.getElementById("recipient");
-var generate = document.getElementById("generate");
-var price = document.getElementById("price");
-var name = document.getElementById("name");
-var shop = document.getElementById("shop");
+var generateBtn = document.getElementById("generate");
+var giftPrice = document.getElementById("price");
+var giftName = document.getElementById("name");
+var giftCopy = document.getElementById("giftCopy");
+var shopBtn = document.getElementById("shop");
 var category;
+var n;
+
+
+
+  generateBtn.addEventListener('click', function(){
+    generateGift();
+  })
+
+  recipient.addEventListener('change', function(){
+    if(recipient.value !== 'Select an option'){
+      generateBtn.classList.remove('disabled');
+      }
+    else{
+      generateBtn.classList.add('disabled');
+    }
+  })
+
+
 
 function generateGift(){
   
@@ -82,36 +101,34 @@ function generateGift(){
   else if (selection == 'dd_category2'){
     category = category2;
   }
+  else{
+    category = "";
+    generateBtn.classList.add('disabled');
+  }
 
-  var n = Math.floor((Math.random() * (category.length)));
-  console.log(category);
-  console.log(category.length);
-  console.log(n);
-
-  gift.src = category[n].product;
-
+  random();
   updatePage();
   
+}
 
-
+function random(){
+  n = Math.floor((Math.random() * (category.length)));
 }
 
 function updatePage(){
-
+  gift.src = category[n].product;
+  giftCopy.classList.remove('hidden');
+  giftPrice.innerHTML = category[n].price;
+  giftName.innerHTML = category[n].name;
+  shopBtn.classList.remove('hidden');
+  shopBtn.addEventListener('click', function(){
+    window.open(category[n].url)
+  })
 }
 
-//on click of generate
 
-// selection = recipient.value
 
-// case selection = category1FullName
-  // category = category1
 
-// call random number function & feed in argument of category so can get length of this category
 
-//
-// gift img src = category[i].product
-// shop display visible
-// shop href = category[i].url
-// price = category[i].price
-// title = category[i].name
+
+

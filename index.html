@@ -18,45 +18,35 @@
 
 <!-- main -->
 		<div class="main paddingBottom">
-			
-			<img class="bottom" src="images/elf1.png">
-			<div class="gift"><img class="bottom" src="images/1.jpg" id="gift"></div>
 
 			<div class="form">
-			 	<select name="recipient" id="recipient" class="dd ">
-			 		<option selected="select">Select from below</option>
-			 		<option value="dd_category1">Man1</option>
-			 		<option value="dd_category2">Woman1</option>
-			 	</select>
+			 	<div class="marginBottom">
+				 	<div class="center inline marginBottom">
+					 	<select name="recipient" id="recipient" class="dd ">
+					 		<option selected="select">Select an option</option>
+					 		<option value="dd_category1">Man</option>
+					 		<option value="dd_category2">Woman</option>
+					 		<option value="dd_category3">Boy</option>
+					 		<option value="dd_category4">Girl</option>
+					 	</select>
+				 	</div>
+					
+			 		<div class="center inline"><button type="button" class="button color1 disabled" id="generate">Generate Gift</button></div>
+			 	</div> 	
+			
+				<div id="giftCopy" class="hidden">
+					<div class="copy inline marginBottom" id="name"></div>
+					<div class="copy price inline marginBottom" id="price"></div>
+				</div>	
 
-			 	<button type="button" class="button color1" id="generate">Generate Gift</button>
-
-				<span class="copy price" id="price">£36</span>
-				<span class="copy" id="name">Lanson Black Label & Exclusive Champagne Stopper</span>
-				<button type="button" class="button color2 " id="shop">Shop Now</button>
+				<div class="center"><button type="button" class="button color2 hidden" id="shop">Shop Now</button></div>
 			</div>
+			
+			<div class="gift"><img class="bottom" src="images/1.jpg" id="gift"></div>
+			
+			<img class="bottom" src="images/elf1.png">
+			
 		</div>
-
-		<!-- <div class="info">
-			<span id="price">£36</span>
-			<span id="name">Lanson Black Label & Exclusive Champagne Stopper!</span>
-			<button type="button" class="button" id="shop">Shop Now</button>
-		</div> -->
-
-<!-- interaction -->
-		 <!-- <div class="form paddingBottom">
-			 
-		 	<select name="recipient" class="dd">
-		 		<option selected="select">Select from below</option>
-		 		<option value="category1">category1</option>
-		 		<option value="category2">category2</option>
-		 	</select>
-			 
-
-		 	<button type="button" class="button" id="generate">Generate Gift</button>
-
-		 </div> -->
-
 
 
 
