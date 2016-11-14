@@ -32,22 +32,48 @@ var category1 = [
   }
 ]  
 
+var category2 = [
+  {"product": "https://dosrgfkou9o2m.cloudfront.net/api/images/Cardshop/1/product/NWCHLB4-AR/6?subscription-key=b00894e69b9f499cb2beb782cf79e5be&w=680",
+   "url": "https://www.moonpig.com/uk/Gift/Flowers/Detail/NWCHLB4-AR/",
+   "name": "Lanson Black Label & Exclusive Champagne Stopper!",
+   "price": "£36.00"
+  },
+
+  {"product": "https://dosrgfkou9o2m.cloudfront.net/api/images/Cardshop/1/product/HAMP34/2?subscription-key=b00894e69b9f499cb2beb782cf79e5be&w=680",
+   "url": "https://www.moonpig.com/uk/Gift/Flowers/Detail/HAMP34/",
+   "name": "Thornton & France Cheese Lovers Wicker Tray",
+   "price": "£20.00"
+  },
+
+  {"product": "https://dosrgfkou9o2m.cloudfront.net/api/images/Cardshop/1/product/NWSLG2/1?subscription-key=b00894e69b9f499cb2beb782cf79e5be&w=680",
+   "url": "https://www.moonpig.com/uk/Gift/Flowers/Detail/NWSLG2/",
+   "name": "Freedom Award Winning British Lagers Gift Set",
+   "price": "£22.00"
+  },
+
+  {"product": "https://dosrgfkou9o2m.cloudfront.net/api/images/Cardshop/1/product/HAMP45/2?subscription-key=b00894e69b9f499cb2beb782cf79e5be&w=680",
+   "url": "https://www.moonpig.com/uk/Gift/Flowers/Detail/HAMP45/",
+   "name": "Christmas Favourites Filled Santa Sack",
+   "price": "£35.00"
+  },
+
+  {"product": "https://dosrgfkou9o2m.cloudfront.net/api/images/Cardshop/1/product/BOX440/3?subscription-key=b00894e69b9f499cb2beb782cf79e5be&w=680",
+   "url": "https://www.moonpig.com/uk/Gift/Flowers/Detail/BOX440/",
+   "name": "The Curry Night Box",
+   "price": "£35.00"
+  }
+]
+
 var gift = document.getElementById("gift");
 var recipient = document.getElementById("recipient");
 var generate = document.getElementById("generate");
 var price = document.getElementById("price");
 var name = document.getElementById("name");
 var shop = document.getElementById("shop");
-
-// function random(){
-//   generateGift();
-//   var n = Math.floor((Math.random() * (category.length)));
-//   return n;
-// }
+var category;
 
 function generateGift(){
-// recipient.value is named the same as category object
-  var category;
+  
   var selection = recipient.value;
 
   if (selection == 'dd_category1'){
@@ -57,14 +83,17 @@ function generateGift(){
     category = category2;
   }
 
-
-
-
-
   var n = Math.floor((Math.random() * (category.length)));
   console.log(category);
-  // console.log(category.length);
-  // return category;
+  console.log(category.length);
+  console.log(n);
+
+  gift.src = category[n].product;
+
+  updatePage();
+  
+
+
 }
 
 function updatePage(){

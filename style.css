@@ -101,14 +101,16 @@ h2{
 	width: 24%;
 }
 
-#gift{
+.gift{
 	width: 50%;
 	background-color: white;
 	border: 10px solid #cea267;
 	display: inline-block;
 }
 
-#gift img{
+
+
+.gift img{
 	width: 100%;
 }
 
