@@ -67,11 +67,12 @@ table {
 
 h2{
 	font-family: 'open sans', sans-serif;
-	font-size: 16px;
+	font-size: 18px;
 	color: white;
 	text-transform: uppercase;
 	letter-spacing: 4px;
 	font-weight: 800;
+	line-height: 120%;
 }
 
 .copy{
@@ -103,10 +104,11 @@ h2{
 }
 
 .gift{
-	width: 45%;
+	width: 50%;
 	background-color: white;
 	border: 5px solid #cea267;
 	display: inline-block;
+	text-align: center;
 }
 
 
@@ -262,5 +264,8 @@ h2{
 	display: none;
 }
 
+.mobilehide{
+	display: none;
+}
 
 }/* end media query*/
